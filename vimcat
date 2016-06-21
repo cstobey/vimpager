@@ -32,6 +32,7 @@ else
 fi
 
 . "$project_dir/inc/vimcat_functions.sh"
+. "$project_dir/inc/common_functions.sh"
 
 # if no args and no stdin, display usage
 if [ $# -eq 0 -a -t 0 ]; then
