@@ -19,7 +19,7 @@ quit() {
 
         rm -rf "$tmp" 2>/dev/null # rm -rf "" shows error on OpenBSD
     ) &
-    exit "$@"
+    exit "${1:-0}"
 }
 
 do_sleep() {
