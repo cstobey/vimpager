@@ -55,5 +55,15 @@ script:
         fi
     - make all
     - make test
+    - |
+        if [[ $TRAVIS_OS_NAME == osx ]]; then
+            make install
+        else
+            sudo make install
+        fi
+        [[ "$(which vimpager)" == /usr/local/bin/vimpager ]]
+        [[ "$(which vimcat)" == /usr/local/bin/vimcat ]]
+        vimpager -v
+        vimcat -v
 
 # vim: sw=4
